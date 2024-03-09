@@ -5,6 +5,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    color: #ffff;
 }
 
 .fx_12_500 {
@@ -15,6 +16,14 @@
     font-size: 12px;
     font-weight: 400;
 }
+.fx_15_400 {
+    font-size: 15px;
+    font-weight: 400;
+}
+.fx_18_400 {
+    font-size: 18px;
+    font-weight: 400;
+}
 .fx_18_500 {
     font-size: 18px;
     font-weight: 500;
@@ -22,6 +31,11 @@
 .fx_39_500 {
     font-size: 39px;
     font-weight: 500;
+}
+
+.fx_40_300 {
+    font-size: 40px;
+    font-weight: 300;
 }
 
 .mr_2 {
@@ -35,7 +49,11 @@
 .flex_row_global {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: start;
     gap: 10px;
     flex-wrap: wrap;
+}
+
+.color_light_purple {
+    color: #BBC0FF;
 }

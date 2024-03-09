@@ -1,7 +1,7 @@
 import React from "react";
 import { useProducts } from "../hooks/useProducts";
-import ProductCard from "./productCard/ProductCard";
-import ProductCardContainer from "./ProductCardContainer";
+import ProductCardContainer from "./productCard/ProductCardContainer";
+import styles from "./CardList.module.scss";
 
 const CardList = () => {
   const { data, isLoading } = useProducts();
@@ -9,7 +9,7 @@ const CardList = () => {
   if (!data) return null;
   console.log(data);
   return (
-    <div className="flex_row_global" style={{ padding: "20px" }}>
+    <div className={`flex_row_global ${styles.card_list_container}`}>
       {data.map((product) => (
         <ProductCardContainer key={product.id} product={product} />
       ))}

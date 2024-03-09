@@ -27,6 +27,7 @@
 }
 .card_sub_body {
     @include flex-row;
+    align-items: start;
 }
 .product_title {
     color: #BBC0FF;
