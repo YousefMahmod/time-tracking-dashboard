@@ -1,6 +1,7 @@
 import React from "react";
 import { useProducts } from "../hooks/useProducts";
 import ProductCard from "./productCard/ProductCard";
+import ProductCardContainer from "./ProductCardContainer";
 
 const CardList = () => {
   const { data, isLoading } = useProducts();
@@ -10,7 +11,7 @@ const CardList = () => {
   return (
     <div>
       {data.map((product) => (
-        <ProductCard key={product.id} product={product} />
+        <ProductCardContainer key={product.id} product={product} />
       ))}
     </div>
   );
