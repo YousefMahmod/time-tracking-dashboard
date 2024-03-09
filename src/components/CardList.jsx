@@ -9,7 +9,7 @@ const CardList = () => {
   if (!data) return null;
   console.log(data);
   return (
-    <div>
+    <div className="flex_row_global" style={{ padding: "20px" }}>
       {data.map((product) => (
         <ProductCardContainer key={product.id} product={product} />
       ))}
