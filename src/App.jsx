@@ -1,11 +1,11 @@
-
+import CardList from "./components/CardList";
 function App() {
-
   return (
     <>
-      Time Tracking Dashboard
+      <h1> Time Tracking Dashboard</h1>
+      <CardList />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
