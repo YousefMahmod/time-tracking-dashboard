@@ -1,0 +1,42 @@
+@mixin flex-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@mixin flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.card_container {
+    background: #1C204B;
+    color: #ffff;
+    border-radius: 10px;
+    padding: 32px 32px 32px 32px;
+    width: 255px;
+    height: 199px;
+}
+
+.card_title {
+    @include flex-row;
+    margin-bottom: 24px;
+}
+.store_details {
+    text-align: center;
+}
+.card_sub_body {
+    @include flex-row;
+}
+.product_title {
+    color: #BBC0FF;
+}
+
+.dot {
+    display: inline-block;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: #D8D8D8;
+    margin-right: 2px;
+}
