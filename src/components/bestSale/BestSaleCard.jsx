@@ -13,8 +13,8 @@ const BestSaleCard = () => {
           />
         </div>
         <div className={styles.best_sale_text}>
-          <p className="fx_15_400 color_light_purple">Report for</p>
-          <h2 className="fx_40_300">Best Sales</h2>
+          <p className="fx_15_400 color_light_purple mb_4">Report for</p>
+          <h2 className={`fx_40_300 ${styles.best_sales}`}>Best Sales</h2>
         </div>
       </div>
       <div className={`fx_18_400 ${styles.best_sale_categories}`}>

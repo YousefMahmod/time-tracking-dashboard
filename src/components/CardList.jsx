@@ -18,7 +18,7 @@ const CardList = () => {
   let colorIndex = 0;
   return (
     <div className={`flex_row_global ${styles.card_list_container}`}>
-      {data.map((product, index) => {
+      {data.map((product) => {
         colorIndex = colors.length == colorIndex ? 0 : colorIndex;
         return (
           <ProductCardContainer

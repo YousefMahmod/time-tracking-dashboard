@@ -1,4 +1,4 @@
-$padding_left: 30px;
+$padding_x: 35px;
 .best_sale_container {
     width: 255px;
     height: 518px;
@@ -15,7 +15,6 @@ $padding_left: 30px;
         .best_sale_photo_container {
             display: flex;
             justify-content: center;
-            // margin-top: 20px;
             margin-bottom: 20px;
             .best_sale_photo {
                 object-fit: cover;
@@ -28,12 +27,19 @@ $padding_left: 30px;
         }
 
         .best_sale_text {
-            padding-left: $padding_left;
+            padding-left: $padding_x;
+            padding-right: $padding_x;
+
+            .best_sales {
+                letter-spacing: 12px;
+            }
         }
+        
     }
     
     .best_sale_categories {
-        padding-left: $padding_left;
+        padding-left: $padding_x;
+        padding-right: $padding_x;
         display: flex;
         flex-direction: column;
         gap: 22px;
