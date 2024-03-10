@@ -7,7 +7,7 @@ const CardList = () => {
   const { data, isLoading } = useProducts();
   if (isLoading) return <p>Loading...</p>;
   if (!data) return null;
-  console.log(data);
+
   return (
     <div className={`flex_row_global ${styles.card_list_container}`}>
       {data.map((product) => (
