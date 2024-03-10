@@ -7,12 +7,27 @@ const CardList = () => {
   const { data, isLoading } = useProducts();
   if (isLoading) return <p>Loading...</p>;
   if (!data) return null;
-
+  const colors = [
+    "#FF8B64",
+    "#55C2E6",
+    "#FF5E7D",
+    "#4BCF82",
+    "#7335D2",
+    "#F1C75B",
+  ];
+  let colorIndex = 0;
   return (
     <div className={`flex_row_global ${styles.card_list_container}`}>
-      {data.map((product) => (
-        <ProductCardContainer key={product.id} product={product} />
-      ))}
+      {data.map((product, index) => {
+        colorIndex = colors.length == colorIndex ? 0 : colorIndex;
+        return (
+          <ProductCardContainer
+            key={product.id}
+            product={product}
+            color={colors[colorIndex++]}
+          />
+        );
+      })}
     </div>
   );
 };

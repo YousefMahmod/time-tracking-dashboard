@@ -2,9 +2,12 @@ import React from "react";
 import ProductCard from "./ProductCard";
 import styles from "./ProductCardContainer.module.scss";
 
-const ProductCardContainer = ({ product }) => {
+const ProductCardContainer = ({ product, color }) => {
   return (
-    <div className={styles.product_card_container}>
+    <div
+      className={styles.product_card_container}
+      style={{ background: color }}
+    >
       <ProductCard product={product} />
     </div>
   );
