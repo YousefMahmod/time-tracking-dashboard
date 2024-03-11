@@ -1,6 +1,8 @@
+@use '../../styles/variables' as *;
 .product_card_container {
     padding-top: 40px;
     width: fit-content;
-    border-radius: 10px;
+    border-top-left-radius: $card_border_radius;
+    border-top-right-radius: $card_border_radius;
     margin-bottom: 10px;
 }

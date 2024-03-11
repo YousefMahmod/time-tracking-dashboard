@@ -1,6 +1,8 @@
 .card_list_container {
-    padding: 20px 0 20px 0px;
-    width: 75%;
+    display: grid;
+    grid-template-columns: repeat(6, auto);
+    grid-gap: 32px;
+    padding: 20px;
 }
 
 @media (max-width: 768px) {

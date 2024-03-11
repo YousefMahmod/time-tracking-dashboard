@@ -1,15 +1,16 @@
+@use '../../styles/variables' as *;
+
 $padding_x: 35px;
 .best_sale_container {
-    width: 255px;
+    width: $card_width;
     height: 518px;
     background-color: #1C204B;
-    border-radius: 20px;
-    margin-top: 20px;
-
+    border-radius: $card_border_radius;
+    grid-row: 1 / span 2;
     .best_sale_top {
         background-color: #5747EA;
         height: 354px;
-        border-radius: 20px;
+        border-radius: $card_border_radius;
         padding-top: 20px;
         margin-bottom: 20px;
         .best_sale_photo_container {
@@ -49,4 +50,36 @@ $padding_x: 35px;
 
 .best_sale_active {
     color: #ffff;
+}
+
+@media (max-width: 768px) {
+    .best_sale_container {
+        width: 327px;
+        height: 202px;
+        .best_sale_top {
+            display: flex;
+            height: 133px;
+
+            .best_sale_photo_container {
+                // display: flex;
+                // justify-content: center;
+                // margin-bottom: 20px;
+                .best_sale_photo {
+                    // object-fit: cover;
+                    width: 64px;
+                    height: 64px;
+                    
+                }
+            }
+        }
+
+        .best_sale_categories {
+            // padding-left: $padding_x;
+            // padding-right: $padding_x;
+            // display: flex;
+            flex-direction: row;
+            // gap: 22px;
+        }
+    }
+    
 }

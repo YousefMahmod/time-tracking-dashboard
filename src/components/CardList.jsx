@@ -2,6 +2,7 @@ import React from "react";
 import { useProducts } from "../hooks/useProducts";
 import ProductCardContainer from "./productCard/ProductCardContainer";
 import styles from "./CardList.module.scss";
+import BestSaleCard from "./bestSale/BestSaleCard";
 
 const CardList = () => {
   const { data, isLoading } = useProducts();
@@ -17,7 +18,8 @@ const CardList = () => {
   ];
   let colorIndex = 0;
   return (
-    <div className={`flex_row_global ${styles.card_list_container}`}>
+    <div className={`${styles.card_list_container}`}>
+      <BestSaleCard />
       {data.map((product) => {
         colorIndex = colors.length == colorIndex ? 0 : colorIndex;
         return (

@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styles from "./BestSaleCard.module.scss";
 import bitmap from "../../assets/bitmap.png";
+import useWindowSize from "../../hooks/useWindowSize";
 const BestSaleCard = () => {
+  const sizeX = useWindowSize();
   return (
     <div className={styles.best_sale_container}>
       <div className={styles.best_sale_top}>
@@ -14,7 +16,13 @@ const BestSaleCard = () => {
         </div>
         <div className={styles.best_sale_text}>
           <p className="fx_15_400 color_light_purple mb_4">Report for</p>
-          <h2 className={`fx_40_300 ${styles.best_sales}`}>Best Sales</h2>
+          <h2
+            className={
+              sizeX < 700 ? `fx_24_300` : `fx_40_300 ${styles.best_sales}`
+            }
+          >
+            Best Sales
+          </h2>
         </div>
       </div>
       <div className={`fx_18_400 ${styles.best_sale_categories}`}>
